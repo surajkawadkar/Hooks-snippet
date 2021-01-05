@@ -1,12 +1,14 @@
 import React, {useState} from 'react'
 // doesnt work
 function Array() {
-    const [items, setItems] = useState(["hii","hey"])
+    const [items, setItems] = useState([])
     const [element, setElement] = useState("")
 
 
-    const handleSubmit = () =>{  
+    const handleSubmit = (e) =>{ 
+        e.preventDefault(); 
          setItems([...items,element])
+         
          
         
         
@@ -14,21 +16,21 @@ function Array() {
     return (
         <div>
             <input type="text"
-           //value ={element}
+           value ={element}
             placeholder="item name"
             onChange={e=> setElement(e.target.value)}
             
              />
            
             
-             <button type="submit" onClick={handleSubmit} >submit</button>
+             <button type="submit" defaultValue="Reset" onClick={handleSubmit} >submit</button>
           
 
             <div>
-                <h2>{items}</h2>
+                
                 <ul>
                     {
-                        items.map(item=><li >{item}</li>)
+                        items.map((item,index)=><li key = {index} >{item}</li>)
                     }
                 </ul>
             </div>
