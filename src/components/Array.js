@@ -1,28 +1,34 @@
 import React, {useState} from 'react'
-
+// doesnt work
 function Array() {
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState(["hii","hey"])
+    const [element, setElement] = useState("")
 
 
-    const handleSubmit = e =>{ setItems({items:[...items, e.target.value]})
-    console.log(e.target.value);
-
+    const handleSubmit = () =>{  
+         setItems([...items,element])
+         
+        
+        
     }
-
     return (
         <div>
             <input type="text"
-            value ={items}
+           //value ={element}
             placeholder="item name"
+            onChange={e=> setElement(e.target.value)}
             
              />
+           
+            
              <button type="submit" onClick={handleSubmit} >submit</button>
-            <h2>{[...items]}</h2>
+          
 
             <div>
+                <h2>{items}</h2>
                 <ul>
                     {
-                        items.map(item=><li key = {item.id}>{item.value}</li>)
+                        items.map(item=><li >{item}</li>)
                     }
                 </ul>
             </div>
@@ -31,3 +37,8 @@ function Array() {
 }
 
 export default Array
+
+//syntax of map
+// Array.map((element,index)=>{
+//     <li key={index}>{element}</li>
+//  })
