@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-// doesnt work
+
 function Array() {
     const [items, setItems] = useState([])
     const [element, setElement] = useState("")
@@ -7,7 +7,9 @@ function Array() {
 
     const handleSubmit = (e) =>{ 
         e.preventDefault(); 
+        setElement("")
          setItems([...items,element])
+        
          
          
         
@@ -19,6 +21,7 @@ function Array() {
            value ={element}
             placeholder="item name"
             onChange={e=> setElement(e.target.value)}
+            
             
              />
            
