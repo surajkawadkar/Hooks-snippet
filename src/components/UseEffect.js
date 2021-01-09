@@ -1,30 +1,18 @@
-import React, {useState, useEffect} from 'react'
-//not working
-function Useeffect() {
-    const [count,setCount] = useState(0)
+import React, { useState, useEffect } from 'react';
 
-
-    const handleClick = (e) =>{
-        setCount(count+1)
-
-    }
-
+function UseEffect() {
+    const [count, setCount] = useState(0);
     useEffect(() => {
-        document.title =  {count}
-        
-    } )
-
-
-
-    // useEffect(()=>{ 
-    //     document.title = 'you are clicked ${count} times'
-    // })
-   
+        document.title = `You clicked ${count} times`;  // this is tilt sigh right above the caps lock button
+      });
     return (
         <div>
-            <button type="button" onClick={handleClick}>count {count}</button>
-        </div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
     )
 }
 
-export default Useeffect
+export default UseEffect
