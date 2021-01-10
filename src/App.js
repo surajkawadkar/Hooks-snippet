@@ -6,6 +6,7 @@ import UseEffect from './components/UseEffect';
 import Useeffect from './components/UseEffect';
 import MouseEvent from "./components/MouseEvent";
 import MouseContainer from './components/MouseContainer';
+import DependenciesUseeffect from './components/DependenciesUseeffect';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
      {/* <NameObject/> */}
      {/* <Array/> */}
      {/* <MouseEvent/> */}
-     <MouseContainer/>
+     {/* <MouseContainer/> */}
+     <DependenciesUseeffect/>
      </div>
 )
 }
