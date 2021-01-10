@@ -12,7 +12,8 @@ function DependenciesUseeffect() {
         return () => {
             clearInterval(interval)    //cleaanup
         }
-    }, [count])   //dependency must to  work if its empty execute once and stop i.e. 1 as a output
+        //insted of tick we caan use count too in dependency array
+    }, [tick])   // dependency array count it rerendere when the count value changes , if it is empty we ignore the changes which is incorect
     return (
         <div>
             <h2> {count}</h2>
