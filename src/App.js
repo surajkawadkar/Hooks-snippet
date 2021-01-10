@@ -8,6 +8,7 @@ import MouseEvent from "./components/MouseEvent";
 import MouseContainer from './components/MouseContainer';
 import DependenciesUseeffect from './components/DependenciesUseeffect';
 import DataFetchingAPI from './components/DataFetchingAPI';
+import ComponentC from './components/useContext/ComponentC';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
      {/* <MouseEvent/> */}
      {/* <MouseContainer/> */}
      {/* <DependenciesUseeffect/> */}
-     <DataFetchingAPI/>
+     {/* <DataFetchingAPI/> */}
+     <ComponentC/>
      </div>
 )
 }
