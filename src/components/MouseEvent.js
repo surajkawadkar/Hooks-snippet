@@ -10,8 +10,9 @@ function MouseEvent() {
     }
     useEffect(()=>
     {console.log("useeffect called");
-    window.addEventListener('mousemove',logMousePositon);}
-    )
+    window.addEventListener('mousemove',logMousePositon)
+    },[ ])  //empty brancket make it execute only once just like component did mount
+    
     return (
         <div>
             Hooks X-{x} Y- {y}
