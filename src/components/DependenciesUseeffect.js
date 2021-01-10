@@ -5,7 +5,8 @@ function DependenciesUseeffect() {
     const [count, setCount] = useState(0)
 
     const tick = () =>{
-        setCount(count+1)
+         setCount(count+1)
+       // setCount(prevCount=>prevCount+1)  // if we use this we dont need dependency array to pass parameter
     }
     useEffect(() => {
         const interval = setInterval(tick,1000)  
