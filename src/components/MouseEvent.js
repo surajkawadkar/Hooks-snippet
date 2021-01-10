@@ -11,6 +11,13 @@ function MouseEvent() {
     useEffect(()=>
     {console.log("useeffect called");
     window.addEventListener('mousemove',logMousePositon)
+
+    //below return code is for cleanup the event when toggles to off state ust like "componenetWillUnmount lifecycle" 
+    return () =>{
+        console.log("component unmountng code");
+        window.removeEventListener('mousemove',logMousePositon)
+    }
+
     },[ ])  //empty brancket make it execute only once just like component did mount
     
     return (
