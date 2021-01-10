@@ -8,7 +8,8 @@ import MouseEvent from "./components/MouseEvent";
 import MouseContainer from './components/MouseContainer';
 import DependenciesUseeffect from './components/DependenciesUseeffect';
 import DataFetchingAPI from './components/DataFetchingAPI';
-import ComponentC from './components/useContext/ComponentC';
+//import ComponentC from './components/useContext/ComponentC';
+import ComponentC from './components/useContextHook/ComponentC';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
      {/* <MouseContainer/> */}
      {/* <DependenciesUseeffect/> */}
      {/* <DataFetchingAPI/> */}
+     {/* <ComponentC/>  this is from usecontext */}
      <ComponentC/>
      </div>
 )
